@@ -36,7 +36,7 @@ def part1():
                 if data[row][col].isdigit() and number_start_col is None:
                     number_start_col = col
 
-                if data[row][col + 1].isdigit():
+                if (col + 1) < 140 and data[row][col + 1].isdigit():
                     col += 1
                 else:
                     if line[col].isdigit() and check_around(data, row, number_start_col, col - number_start_col + 1):
